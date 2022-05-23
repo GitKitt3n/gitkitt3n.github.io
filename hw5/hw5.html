@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5 Intro to HTML</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(229, 201, 255);
+        background-image: url("pexels-gabriela-palai-395198.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h1 {
+        font-style: italic;
+        text-align: center;
+      }
+
+      h2 {
+        text-align: right;
+      }
+
+      p::first-letter {
+        font-size: 300%;
+      }
+
+      footer {
+        background-image: url("wallpaper.jpeg");
+        background-repeat: repeat-x;
+        background-position: top;
+        border: 2px solid rgba(0, 8, 255, 0.6);
+      }
+
+      footer p {
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <script type="text/javascript">
+        /***********************************************
+         * Display time of last visit script- by JavaScriptKit.com
+         * This notice MUST stay intact for use
+         * Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and more
+         ***********************************************/
+
+        var days = 730; // days until cookie expires = 2 years.
+        var lastvisit = new Object();
+        var firstvisitmsg = "This is your first visit to this page. Welcome!";
+        lastvisit.subsequentvisitmsg =
+          "Welcome back visitor! Your last visit was on <b>[displaydate]</b>";
+
+        lastvisit.getCookie = function (Name) {
+          var re = new RegExp(Name + "=[^;]+", "i");
+          if (document.cookie.match(re))
+            return document.cookie.match(re)[0].split("=")[1];
+          return "";
+        };
+
+        lastvisit.setCookie = function (name, value, days) {
+          var expireDate = new Date();
+
+          var expstring = expireDate.setDate(
+            expireDate.getDate() + parseInt(days)
+          );
+          document.cookie =
+            name +
+            "=" +
+            value +
+            "; expires=" +
+            expireDate.toGMTString() +
+            "; path=/";
+        };
+
+        lastvisit.showmessage = function () {
+          var wh = new Date();
+          if (lastvisit.getCookie("visitc") == "") {
+            lastvisit.setCookie("visitc", wh, days);
+            document.write(firstvisitmsg);
+          } else {
+            var lv = lastvisit.getCookie("visitc");
+            var lvp = Date.parse(lv);
+            var now = new Date();
+            now.setTime(lvp);
+            var day = new Array(
+              "Sun",
+              "Mon",
+              "Tues",
+              "Wed",
+              "Thur",
+              "Fri",
+              "Sat"
+            );
+            var month = new Array(
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec"
+            );
+            var dd = now.getDate();
+            var dy = now.getDay();
+            dy = day[dy];
+            var mn = now.getMonth();
+            mn = month[mn];
+            yy = now.getFullYear();
+            var hh = now.getHours();
+            var ampm = "AM";
+            if (hh >= 12) {
+              ampm = "PM";
+            }
+            if (hh > 12) {
+              hh = hh - 12;
+            }
+            if (hh == 0) {
+              hh = 12;
+            }
+            if (hh < 10) {
+              hh = "0" + hh;
+            }
+            var mins = now.getMinutes();
+            if (mins < 10) {
+              mins = "0" + mins;
+            }
+            var secs = now.getSeconds();
+            if (secs < 10) {
+              secs = "0" + secs;
+            }
+            var dispDate =
+              dy +
+              ", " +
+              mn +
+              " " +
+              dd +
+              ", " +
+              yy +
+              " " +
+              hh +
+              ":" +
+              mins +
+              ":" +
+              secs +
+              " " +
+              ampm;
+            document.write(
+              lastvisit.subsequentvisitmsg.replace("\[displaydate\]", dispDate)
+            );
+          }
+
+          lastvisit.setCookie("visitc", wh, days);
+        };
+
+        lastvisit.showmessage();
+      </script>
+      <h1>Homework 5</h1>
+    </header>
+    <article>
+      <p>
+        I used the Display time of last visit from Javascriptkit.is simply dummy
+        text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry's standard dummy text ever since the 1500s, when an unknown
+        printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was
+        popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software
+        like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </article>
+    <header>
+      <h2>Inline CSS</h2>
+    </header>
+    <article>
+      <p>
+        is simply dummy text of the printing and typesetting industry. Lorem
+        Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a
+        type specimen book. It has survived not only five centuries, but also
+        the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets
+        containing Lorem Ipsum passages, and more recently with desktop
+        publishing software like Aldus PageMaker including versions of Lorem
+        Ipsum.
+      </p>
+    </article>
+
+    <footer>
+      <p>1st paragraph</p>
+      <p>2nd paragraph</p>
+      <p>3rd paragraph</p>
+      <p>4th paragraph</p>
+      <p>5th paragraph</p>
+    </footer>
+  </body>
+</html>
