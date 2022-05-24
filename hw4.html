@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HW4 Intro to HTML/CSS</title>
+    <style>
+      img {
+        width: 500px;
+        height: 200px;
+      }
+    </style>
   </head>
   <body>
     <ul>
@@ -13,8 +19,48 @@
           >City College SF Website</a
         >
       </li>
-      <li><a href="Assignments/index.html">Home</a></li>
-      <li></li>
+      <li><a href="index.html" target="_self">Home</a></li>
+      <li>
+        <a href="https://www.blippo.com/" target="_blank" title="Kawaii Shop"
+          >Kawaii Shop &hearts;</a
+        >
+      </li>
     </ul>
+
+    <table>
+      <tr>
+        <th>List</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td>Unordered List</td>
+        <td>&lt;ul&gt; is used to order a list of items with no set order.</td>
+      </tr>
+      <tr>
+        <td>Ordered List</td>
+        <td>&lt;ol&gt; is used to create a list with a specified order.</td>
+      </tr>
+      <tr>
+        <td>Definition List</td>
+        <td>
+          &lt;dl&gt; is a definition list which is commonly used for key pairs
+          or to implement a glossary.
+        </td>
+      </tr>
+    </table>
+    <figure>
+      <img src="images/vapor city.jpg" alt="City Night Bit Art" />
+      <figcaption>Author of image is unknown.</figcaption>
+    </figure>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Hyper text markup language</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Stylesheet</dd>
+      <dt>FTP</dt>
+      <dd>File Transfer Protocol</dd>
+      <dt>SSH</dt>
+      <dd>Secure Shell Protocol</dd>
+    </dl>
   </body>
 </html>
