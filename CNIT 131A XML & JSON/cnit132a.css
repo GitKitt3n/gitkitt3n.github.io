@@ -1,0 +1,45 @@
+:root {
+  --back-color: #0b484d;
+  --nav-color: #ffffff;
+  --ulfont-color: #9d4200;
+  --ulhover-color: #760851;
+  --h1-color: #ffffff;
+  --font-fam: courier;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: var(--back-color);
+  width: 100%;
+  height: 100vh;
+  font-family: var(--font-fam);
+}
+h1 {
+  color: var(--h1-color);
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+nav {
+  background-color: var(--nav-color);
+  height: 30px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 1%;
+  display: inline-block;
+  vertical-align: middle;
+}
+ul a {
+  color: var(--ulfont-color);
+  text-decoration: overline;
+  text-transform: uppercase;
+}
+
+ul a:hover {
+  color: var(--ulhover-color);
+  text-decoration: line-through;
+}
