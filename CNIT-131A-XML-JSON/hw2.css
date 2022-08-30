@@ -1,0 +1,33 @@
+bookCatalog {
+  background-color: lightgray;
+}
+
+Book {
+  display: block;
+}
+
+title {
+  display: block;
+  font-weight: bold;
+  color: red;
+}
+author {
+  display: block;
+  color: white;
+}
+publisher {
+  display: block;
+  color: white;
+}
+
+Book:nth-child(1) {
+  background: rgb(80, 5, 10);
+}
+
+Book:nth-child(3) {
+  background: rgb(134, 69, 0);
+}
+
+Book:nth-child(5) {
+  background: rgb(5, 83, 37);
+}
