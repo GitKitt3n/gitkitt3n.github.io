@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Homework Assignment 2" />
+    <title>CNIT 133 Assignment 2</title>
+    <link rel="stylesheet" href="hw2.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CNIT 133 Homework 2 Basic Operations</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="hw2.html" target="_blank"><button>Assignment 2</button></a>
+        </li>
+        <li>
+          <a href="hw3.html" target="_blank"><button>Assignment 3</button></a>
+        </li>
+        <li>
+          <a href="hw4.html" target="_blank"><button>Assignment 4</button></a>
+        </li>
+        <li>
+          <a href="hw5.html" target="_blank"><button>Assignment 5</button></a>
+        </li>
+        <li>
+          <a href="hw6.html" target="_blank"><button>Assignment 6</button></a>
+        </li>
+        <li>
+          <a href="hw7.html" target="_blank"><button>Assignment 7</button></a>
+        </li>
+        <li>
+          <a href="hw8.html" target="_blank"><button>Assignment 8</button></a>
+        </li>
+      </ul>
+    </nav>
+    <section class="exercises">
+      <ul>
+        <li><a href="doc.write.html">Part 1 document.write statements</a></li>
+        <li><a href="integers.html">Part 2 Input Integers</a></li>
+        <li>Part 3 jQuery</li>
+      </ul>
+    </section>
+    <h3>Part 3 jQuery</h3>
+    <br />
+    <section id="pt3-jquery">
+      <form name="form">
+        Input values:<br /><br />
+        <input type="number" name="num1" /><br />
+        <input type="number" name="num2" /><br />
+        <input type="number" name="num3" /><br />
+        <input type="number" name="num4" /><br />
+        <input type="number" name="num5" /><br /><br />
+        <input type="button" value="submit" onclick="myFunction()" /><br />
+        <br />
+        <textarea type="text" id="result1" rows="10" cols="50"> </textarea
+        ><br />
+      </form>
+      <button>Fade Box</button>
+    </section>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var num1, num2, num3, num4, num5, posCount, negCount, zeroCount;
+
+        num1 = parseInt(document.form.num1.value);
+        num2 = parseInt(document.form.num2.value);
+        num3 = parseInt(document.form.num3.value);
+        num4 = parseInt(document.form.num4.value);
+        num5 = parseInt(document.form.num5.value);
+        posCount = 0;
+        negCount = 0;
+        zeroCount = 0;
+
+        if (num1 > 0) {
+          posCount++;
+        }
+        if (num1 < 0) {
+          negCount++;
+        }
+        if (num1 == 0) {
+          zeroCount++;
+        }
+
+        if (num2 > 0) {
+          posCount++;
+        }
+        if (num2 < 0) {
+          negCount++;
+        }
+        if (num2 == 0) {
+          zeroCount++;
+        }
+
+        if (num3 > 0) {
+          posCount++;
+        }
+        if (num3 < 0) {
+          negCount++;
+        }
+        if (num3 == 0) {
+          zeroCount++;
+        }
+
+        if (num4 > 0) {
+          posCount++;
+        }
+        if (num4 < 0) {
+          negCount++;
+        }
+        if (num4 == 0) {
+          zeroCount++;
+        }
+
+        if (num5 > 0) {
+          posCount++;
+        }
+        if (num5 < 0) {
+          negCount++;
+        }
+        if (num5 == 0) {
+          zeroCount++;
+        }
+
+        document.form.result1.value =
+          "Number of Positive numbers: " +
+          posCount +
+          "\n" +
+          "Number of Negative numbers: " +
+          negCount +
+          "\n" +
+          "Number of Zeros: " +
+          zeroCount;
+      }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#result1").fadeTo("slow", 0.2);
+        });
+      });
+    </script>
+  </body>
+</html>
