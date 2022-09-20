@@ -5,7 +5,6 @@
    <xsl:template match="/">
        <html>
     <body>
-        
         <h1>ABC Financial Startup</h1>
         <img src="/financialstartup.jpg"></img>
 <xsl:for-each select="Accounts/Client"></xsl:for-each>
@@ -21,7 +20,6 @@
      </xsl:for-each>
      </p>
      <p> <xsl:value-of select="count(Accounts/Client/Years [>10])" />of our clients are with us for more than 7 years!</p>
-    </xsl:for-each>
     </body>
 </html>
 
