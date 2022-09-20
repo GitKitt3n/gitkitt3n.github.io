@@ -20,7 +20,7 @@
      </xsl:choose> 
      </xsl:for-each>
      </p>
-     <p> <xsl:value-of select="count"(Accounts/Client/Years [>10])" />of our clients are with us for more than 7 years!</p>
+     <p> <xsl:value-of select="count(Accounts/Client/Years [>10])" />of our clients are with us for more than 7 years!</p>
     </xsl:for-each>
     </body>
 </html>
