@@ -12,9 +12,20 @@
 <p>We have started with <xsl:value-of select="count(../Years [. >= 10])"/> client a little bit more than 10 years ago and now we have
 <xsl:value-of select="count(Accounts/Client)"/> clients!</p>
 
-<p>These are our clients: <xsl:for-each select="Accounts/Client">
-    <xsl:value-of select="Name" />
-  </xsl:for-each>
+<p>These are our clients: 
+ <xsl:for-each select="Accounts/Client">
+<xsl:value-of select="Name" />  
+<xsl:choose>
+  
+<xsl:when test="position()=last()">.</xsl:when>
+
+<xsl:when test="position()=last()-1">, and</xsl:when>
+    
+<xsl:otherwise>, </xsl:otherwise>
+
+
+ </choose> 
+</xsl:for-each>
  </p>
 <p></p>
 
