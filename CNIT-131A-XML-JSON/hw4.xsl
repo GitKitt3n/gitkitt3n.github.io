@@ -9,7 +9,7 @@
         <h1>ABC Financial Startup</h1>
         <img src="/financialstartup.jpg"></img>
 <p>We are a very young financial manager company and we are proud of our clients.</p>
-<p>We have started with <xsl:value-of select="count(../Years [. >= 10])"/> client a little bit more than 10 years ago and now we have
+<p>We have started with <xsl:value-of select="count(Accounts/Client/Years[.>=10])"/> client a little bit more than 10 years ago and now we have
 <xsl:value-of select="count(Accounts/Client)"/> clients!</p>
 
 <p>These are our clients: 
@@ -27,7 +27,10 @@
  </xsl:choose> 
 </xsl:for-each>
  </p>
-<p></p>
+<p> 
+<xsl:value-of select="count(Accounts/Client/Years[.>=7])"/> of our clients have been with us for more than 7 years!
+
+</p>
 
 
 
