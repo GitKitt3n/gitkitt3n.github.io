@@ -24,7 +24,7 @@
 <xsl:otherwise>, </xsl:otherwise>
 
 
- </choose> 
+ </xsl:choose> 
 </xsl:for-each>
  </p>
 <p></p>
