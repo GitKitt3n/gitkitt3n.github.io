@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Simple XML file with no CSS -->
 <?xml-stylesheet type="text/xsl" href="hw3.xsl"?>
 
 <Accounts>
@@ -31,8 +32,7 @@
 </Address>
 <Phone>(532) 555-3813</Phone>
 <Email>cynthia@brownes.com</Email>
-<Account_Total>&lt;80000
-</Account_Total>
+<Account_Total>&#36;80000</Account_Total>
 </Client>
 
 <Client ID="CS5331">
@@ -48,7 +48,7 @@
 </Address>
 <Phone>(532) 555-8981</Phone>
 <Email>rolson@delisp.net</Email>
-<Account_Total> &lt; 25000</Account_Total>
+<Account_Total> &#36; 25000</Account_Total>
 </Client>
 
 <Client ID="CS5771">
@@ -64,7 +64,7 @@
 </Address>
 <Phone>(533) 555-5434</Phone>
 <Email>Sbone@mail.com</Email>
-<Account_Total> &lt; 105000</Account_Total>
+<Account_Total> &#36; 105000</Account_Total>
 </Client>
 
 <Client ID="CS5981">
@@ -80,7 +80,7 @@
 </Address>
 <Phone>(542) 555-8828</Phone>
 <Email>jim_wheatley@kyu.edu</Email>
-<Account_Total> &lt; 83000</Account_Total>
+<Account_Total> &#36; 83000</Account_Total>
 </Client>
 
 <Client ID="CS5308">
@@ -96,7 +96,7 @@
 </Address>
 <Phone>(532) 555-7212</Phone>
 <Email>cka@ispnet.net</Email>
-<Account_Total> &lt; 125000</Account_Total>
+<Account_Total> &#36; 125000</Account_Total>
 </Client>
 
 <Client ID="CS5250">
@@ -112,7 +112,7 @@
 </Address>
 <Phone>(534) 555-9082</Phone>
 <Email>leehayes@clarion.net</Email>
-<Account_Total> &lt;118000</Account_Total>
+<Account_Total> &#36; 118000</Account_Total>
 </Client>
 
 <Client ID="CS5981">
@@ -128,7 +128,7 @@
 </Address>
 <Phone>(534) 555-7493</Phone>
 <Email>jwilson@cls.net</Email>
-<Account_Total> &lt;95000</Account_Total>
+<Account_Total> &#36; 95000</Account_Total>
 </Client>
 
 </Accounts>
