@@ -6,6 +6,7 @@
        <html>
     <body>
     <h1>List of Clients</h1>
+    <img src="/financialstartup.jpg"/>
     <table bordercolor="blue" border="1">
       <tr>
         <th>Name</th>
