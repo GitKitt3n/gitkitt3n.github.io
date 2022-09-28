@@ -8,7 +8,7 @@
     <body>
         <h1>ABC Financial Startup</h1>
         <p align="center"><img
-            src="/financialstartup.jpg"  /></p>
+            src="financialstartup.jpg"  /></p>
 <p>We are a very young financial manager company and we are proud of our clients.</p>
 <p>We have started with <xsl:value-of select="count(Accounts/Client/Years[.>=10])"/> client a little bit more than 10 years ago and now we have
 <xsl:value-of select="count(Accounts/Client)"/> clients!</p>
