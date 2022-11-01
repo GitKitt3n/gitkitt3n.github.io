@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>CNIT 133 - Homework 2 </title>
+
+    
+<style type="text/css">
+
+body {
+	background-image:url(../Slide6.jpg);
+	color:#FFF;
+	font-family:Verdana, Geneva, sans-serif;
+	background-repeat:no-repeat;
+	background-color:cornflowerblue;
+    background-size: 100%;
+    
+}
+
+h1 {
+	color:#FFF;
+}
+
+a:link {
+	color:#FFFFFF;
+}
+a:visited {
+	color:#FFFFFF;
+}
+a:hover {
+	color:#FFFFFF;
+}
+
+    table, th, td {
+        border: 1px solid white;
+        text-align: left;
+        width: 800px;
+        background: grey;
+        opacity: .95;
+    }
+</style>    
+    
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- the following script is needed for jquery validation of input -->
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+<script>
+    
+
+/* JQuery for validation
+displays error message if form input is not a number
+*/
+
+/*
+$(document).ready(function(){
+    $("#p1form").validate({
+	  // Rules for each input item
+	  rules: 
+	  {
+        fnum1: { required: true, number: true, min: 0, max: 100};
+      }
+	});	  
+});
+*/
+
+function grades()
+{
+    var hwAvg, midExam, finalExam, acr, finalAvg;
+
+    hwAvg = parseInt(document.p1form.fnum1.value);
+    midExam = parseInt(document.p1form.fnum2.value);
+    finalExam = parseInt(document.p1form.fnum3.value);
+    acr = parseInt(document.p1form.fnum4.value);
+    
+    finalAvg = (.5 * hwAvg)+(.2 * midExam)+(.2 * finalExam)+(.1 * acr);
+   
+    document.p1form.result1.value = finalAvg;
+    
+    if (finalAvg <= 69) 
+    
+        {
+            alert("Sorry you will have to retake the course");
+        }    
+}
+
+    
+    
+function calculation()
+    {
+        var qty1, qty2, qty3, qty4, value1, value2, value3, value4, profit1, profit2, profit3, profit4, earn1, earn2, earn3, earn4; 
+        
+        qty1 = parseInt(document.getElementById("qty1").value);
+        qty2 = parseInt(document.getElementById("qty2").value);
+        qty3 = parseInt(document.getElementById("qty3").value); 
+        qty4 = parseInt(document.getElementById("qty4").value);
+        
+        value1 = 239.99;
+        value2 = 129.75;
+        value3 = 99.95;
+        value4 = 350.89;  
+        
+        profit1 = qty1 * value1; 
+        profit2 = qty2 * value2; 
+        profit3 = qty3 * value3;
+        profit4 = qty4 * value4;
+        
+        earn1 = 200 + (profit1*0.09);
+        earn2 = 200 + (profit2*0.09);
+        earn3 = 200 + (profit3*0.09);
+        earn4 = 200 + (profit4*0.09);
+        
+        document.getElementById("profit1").innerHTML = profit1;
+        document.getElementById("profit2").innerHTML = profit2;
+        document.getElementById("profit3").innerHTML = profit3;
+        document.getElementById("profit4").innerHTML = profit4;
+        
+        document.getElementById("earn1").innerHTML = earn1;
+        document.getElementById("earn2").innerHTML = earn2;
+        document.getElementById("earn3").innerHTML = earn3;
+        document.getElementById("earn4").innerHTML = earn4;
+    }
+
+   
+function credit()    
+    {
+        var account, initialBal, charges, credit, newBal, limit; 
+        
+        account = parseInt(document.p3form.faccount.value);
+        initialBal = parseInt(document.p3form.finitialBal.value);
+        charges = parseInt(document.p3form.fcharges.value);
+        credit = parseInt(document.p3form.fcredit.value);
+        limit = parseInt(document.p3form.flimit.value);
+        
+        newBal = initialBal + charges - credit;
+        availCredit = limit - newBal;
+    
+        
+        if (newBal > limit)
+            
+            {
+            alert("You are over your spending limit"); 
+            }
+        
+        else 
+            
+            {
+            alert("You are in good standing. You are within your credit limit");
+                
+            }
+    
+        document.p3form.summary.value = "Account Number: " + account  + "\n" + "Balance at the beginning of the month: " + initialBal + "\n" + "Total amount of charged this month: " + charges + "\n" + "Total amount of credits this month: " + credit + "\n" + "Summary: The new balance is: " + newBal + "\n" + "Credit available is: " + availCredit;
+        
+        
+     
+   
+        document.getElementById("account").innerHTML = account;
+        document.getElementById("limit").innerHTML = limit;
+        document.getElementById("initialBal").innerHTML = initialBal;
+        document.getElementById("charges").innerHTML = charges;
+        document.getElementById("credit").innerHTML = credit;
+        document.getElementById("newBal").innerHTML = newBal;
+        document.getElementById("availCredit").innerHTML = availCredit;
+    
+    }
+    
+    function temperatureF()
+    
+{
+    var initialC, finalF;
+    
+    initialC = parseFloat(document.p5form.finitialC.value);
+    
+    if ( isNaN(initialC) )
+      {
+        window.alert("Inputted value " + number + " is Not an integer - try again");
+        window.alert("The parseInt value is " + numberP + " - try again");
+          
+       }
+    
+    finalF = (9/5 * initialC) + 32; 
+    
+    document.p5form.ffinalF.value = finalF;
+  
+    
+}
+      function temperatureC()
+    
+{
+    var initialF, finalC;
+    
+    initialF = parseFloat(document.p5form.finitialF.value);
+    
+    finalC = (5/9 *(initialF - 32)); 
+
+    document.p5form.ffinalC.value = finalC;
+}
+    
+     </script>
+            
+</head>
+    
+
+<body>
+
+<h1>CNIT 133 Homework 2 Page</h1>
+    
+<header> <a href="../index.html">Home & HW 1</a> | <a href="hw2.html">HW 2</a> | HW 3 | <a href="hw4.html">HW 4</a> | <a href="hw5.html">HW 5</a> | <a href="hw6.html">HW 6</a> | <a href="hw7.html">HW 7</a> | <a href="../hw8.html">HW 8</a></header>
+    
+
+<!--This is clean of any major bugs-->
+<h2>PART 1</h2>    
+<h4>Please Submit your values:</h4>
+<form id="p1form" name="p1form" novalidate="novalidate">
+  Input your HW Average
+  <input type="text" id="fnum1" name="fnum1"><br>
+  Input your Midterm Grade
+  <input type="text" id="fnum2" name="fnum2"><br>
+  Input your Final Grade
+  <input type="text" id="fnum3" name="fnum3"><br>
+  Input your ACR Grade
+  <input type="text" id="fnum4" name="fnum4"><br>
+ <input type="button" value="submit" onclick="grades()"><br><br>
+ Your Grade is: <br>
+  <input type="text" id="result1" ><br>
+ 
+</form>
+
+<br>
+<br>
+<hr>
+<!-- this part is clear of any major bugs-->
+<h2>PART 2</h2>    
+<table>
+    <tr>
+        <th>items</th>
+        <th>value</th>
+        <th>quantity sold</th>
+        <th>profit</th>
+        <th>Individual Earning</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>239.99&nbsp;</td>
+        <td><input type="text" id="qty1" name="qty1"></td>
+        <td id="profit1">&nbsp;</td>
+        <td id="earn1"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>129.75</td>
+        <td><input type="text" id="qty2" name="qty2"></td>
+        <td id="profit2">&nbsp;</td>
+        <td id="earn2">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>99.95</td>
+        <td><input type="text" id="qty3" name="qty3"></td>
+        <td id="profit3">&nbsp;</td>
+        <td id="earn3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>350.89</td>
+        <td><input type="text" id="qty4" name="qty4"></td>
+        <td id="profit4">&nbsp;</td>
+        <td id="earn4">&nbsp;</td>
+    </tr>
+</table>   
+    
+<input type="button" value="Run Calculation" onclick="calculation()">   
+
+ 
+<hr>    
+ 
+<!-- part 3 only works when form name is assigned to form -->     
+   
+    
+<h2>PART 3</h2>    
+<h4>Please Submit your values:</h4>
+<form name="p3form">
+  A) Account Number
+  <input type="text" name="faccount" ><br>
+  B) Balance at the beginning of the month
+  <input type="text" name="finitialBal" ><br>
+  C) Total of all items charged by this customer this month
+  <input type="text" name="fcharges" ><br>
+  D) Total of credit applied to this customer's account month
+  <input type="text" name="fcredit" ><br>
+  E) Allowed credit limit
+  <input type="text" name="flimit" ><br>
+ <input type="button" value="run calculation" onclick="credit()"><br><br>
+    
+<textarea type="text" name="summary" rows="10" cols="50"> </textarea>
+    </form>
+  
+
+<!-- This part is clear of any major bugs-->    
+    
+<hr> 
+<h2>Part 5</h2>
+<form name="p5form">
+    Input Celisus
+    <input type="text" name="finitialC">
+    Converts to Fahrenheit ==>
+    <input type="text" name="ffinalF">
+    <input type="button" value="Convert Temperature" onclick="temperatureF()"></input><br><br>
+
+    Input Fahrenheit 
+    <input type="text" name="finitialF">
+    Converts to Celisus ==> 
+    <input type="text" name="ffinalC">
+    <input type="button" value="Convert Temperature" onclick="temperatureC()"></input>
+</form>
+    
+
+
+    
+<footer>
+  <p>
+
+      
+      
+
+<script type="text/javascript">
+var dateModified = document.lastModified;
+mydate = dateModified.slice(0,16);
+document.write("Last updated: " + mydate);
+</script>
+
+<br>   
+<a href="https://validator.w3.org/nu/?doc=http://hills.ccsf.edu/~jthai3"><img src="../images.png" style="border:0;width:36px;height:40px" alt="HTML5" /></a>
+
+<a href="https://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+
+</footer>
+
+</body>
+</html>

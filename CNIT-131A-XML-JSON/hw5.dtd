@@ -1,5 +1,5 @@
 <!ELEMENT Products
-            (Prod*)>
+            (Prod+)>
 <!ELEMENT Prod
             (Details, Quantity, Unit_Price, Color?, Loc)>        
 <!ELEMENT Details

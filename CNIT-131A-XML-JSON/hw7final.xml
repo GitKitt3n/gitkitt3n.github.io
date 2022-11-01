@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--Here are eastern and western states and capitol names-->
+<?xml-stylesheet type="text/css" href="hw7.css" ?>
+<states xmlns:="http://www.gov.org/west/"
+xmlns:eas_stat="http://www.gov.org/east/1.0">
+
+<state>
+        <name>California</name>
+        <capital>Sacramento</capital>
+      </state>
+      <state>  
+        <name>Washington</name>
+        <capital>Olympia</capital>
+      </state>
+      <state>
+        <name>Oregon</name>
+        <capital>Salem</capital>
+      </state>
+    </state>
+
+<eas_stat:state>
+        <eas_stat:name>Florida</eas_stat:name>
+        <eas_stat:capital>Tallahassee</eas_stat:capital>
+      </eas_stat:state>
+      <eas_stat:state>  
+        <eas_stat:name>Maryland</eas_stat:name>
+        <eas_stat:capital>Annapolis</eas_stat:capital>
+      </eas_stat:state>
+      <eas_stat:state>
+        <eas_stat:name>North Carolina</eas_stat:name>
+        <eas_stat:capital>Raleigh</eas_stat:capital>
+      </eas_stat:state>
+
+    </states>

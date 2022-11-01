@@ -2,7 +2,6 @@
 <!DOCTYPE Products SYSTEM "hw5.dtd">
 
 <Products>
-
 <Prod ProdID="P00129934">
 <Details>
   <Short_Desc>Website Magazine</Short_Desc>

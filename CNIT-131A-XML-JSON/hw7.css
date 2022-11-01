@@ -1,0 +1,11 @@
+@namespace eas_stat "http://www.gov.org/east/1.0";
+
+state {
+  display: block;
+  background-color: coral;
+}
+
+eas_state|state {
+  display: block;
+  background-color: blueviolet;
+}
