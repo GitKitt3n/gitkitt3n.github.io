@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--Here are eastern and western states and capitol names-->
 <?xml-stylesheet type="text/css" href="hw7.css" ?>
-<states xmlns:="http://www.gov.org/west/"
+<states xmlns="http://www.gov.org/west/"
 xmlns:eas_stat="http://www.gov.org/east/1.0">
 
 <state>
@@ -16,7 +16,7 @@ xmlns:eas_stat="http://www.gov.org/east/1.0">
         <name>Oregon</name>
         <capital>Salem</capital>
       </state>
-    </state>
+    
 
 <eas_stat:state>
         <eas_stat:name>Florida</eas_stat:name>
