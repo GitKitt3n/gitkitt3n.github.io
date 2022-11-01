@@ -1,5 +1,8 @@
 @namespace eas_stat "http://www.gov.org/east/1.0";
 
+states {
+  background-color: coral;
+}
 state {
   display: block;
   background-color: coral;
