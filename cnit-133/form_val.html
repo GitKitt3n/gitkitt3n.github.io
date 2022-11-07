@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Homework Assignment 2" />
+    <title>CNIT 133 Assignment 5</title>
+    <link href="hw5.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <header>
+        <h1>CNIT 133 Homework 5 Form Validation</h1>
+      </header>
+  
+      <nav>
+        <ul>
+          <li>
+            <a href="hw2.html" target="_blank"><button>Assignment 2</button></a>
+          </li>
+          <li>
+            <a href="hw3.html" target="_blank"><button>Assignment 3</button></a>
+          </li>
+          <li>
+            <a href="hw4.html" target="_blank"><button>Assignment 4</button></a>
+          </li>
+          <li>
+            <a href="hw5.html" target="_blank"><button>Assignment 5</button></a>
+          </li>
+          <li>
+            <a href="hw6.html" target="_blank"><button>Assignment 6</button></a>
+          </li>
+          <li>
+            <a href="hw7.html" target="_blank"><button>Assignment 7</button></a>
+          </li>
+          <li>
+            <a href="hw8.html" target="_blank"><button>Assignment 8</button></a>
+          </li>
+        </ul>
+      </nav>
+      <section class="exercises">
+        <ul>
+          <li><a href="form_val.html">Part 1 Form Validation</a></li>
+          <li><a href="menus.html"> Part 2 Link Menus</a></li>
+          <li><a href="state_info.html">Part 3 State Info</a></li>
+        </ul>
+      </section>
+      <section class="pt1">
+
+         <form name="form">
+         	Alias: <br> <input type="text" name="nickname"><br><br>
+            <input type="radio" name="status" value="cyborg">Cyborg<br>
+			<input type="radio" name="status" value="human">Human<br>
+            <br>
+            Body Mods: <br><br>
+            <input type="checkbox" name="features" value="skin">Cyber Flesh<br>		
+			<input type="checkbox" name="features" value="eyes">Bionic<br>
+            <input type="checkbox" name="features" value="brain">Brain Chip<br>
+			<input type="checkbox" name="features" value="tissue">Regeneration<br><br>
+            
+            <select id="sleeves">
+              <option value="select">--Select One--</option>           
+              <option value="ai">A.I</option>
+              <option value="Humanoid">Humanoid</option>
+              <option value="cyborg">Cyborg</option>
+              <option value="animal">Anthro</option>
+            </select><br><br>
+            
+            <input type="button" onClick="Submit()" value="Submit"><input type="reset" value="Reset"><br />
+            </form><br><br>
+         </section>
+    
+ 
+
+         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+         <script type="text/javascript">	
+         $(document).ready(function(){
+             
+         });
+         
+         function Submit(){
+             var inputValid = true
+             var formString = '';
+             
+             if (!$('input:text').val()) {
+                 alert("Alias required");
+                 inputValid = false;
+                 return;
+             }else{
+                 formString += "nickname: "+$('input:text').val()+"<br><br>";		
+             }
+             if($('input:radio').is(':checked') && inputValid) { 
+                 formString += "Status: "+$('input:radio:checked').val()+"<br><br>";
+                 
+             }else{
+                 alert("Status required"); 
+                 inputValid = false;
+                 return;
+             }
+             if($('input:checkbox:checked').length > 0 && inputValid) { 
+                 formString += "Body Mods: <br>"
+                 $('input:checkbox:checked').each(function(){
+                     formString += $(this).val()+"<br>";
+                 });
+                 formString += "<br>";
+         
+             } else{
+                 alert("Select at least one mod"); 
+                 inputValid = false;
+                 return;
+             }
+             if(inputValid){
+                 formString += $('#sleeves').val();
+             }
+             
+         }
+         
+         </script>
+         <style>
+         
+         </style>
+</body>
+</html>

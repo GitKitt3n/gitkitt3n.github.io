@@ -7,16 +7,16 @@ The Phone should always be using that pattern of 3 digits - 3 digits - 4 digits-
 <xs:element name="Member">
    
 <xs:complexType>
-    <xs:sequence>
+  <xs:sequence>
     <xs:element name="name" type="xs:string"/>
     <xs:element name="age" type="xs:integer"/>
     <xs:element name="date" type="xs:date"/>
     <xs:simpleType name="phone">
-  <xs:restriction base="xs:string">
-    <xs:pattern value="[0-9]{3}"/>
-  </xs:restriction>
-</xs:simpleType>
-    </xs:sequence>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9]{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:sequence>
    
 </xs:complexType>
         
